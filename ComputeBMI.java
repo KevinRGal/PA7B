@@ -16,5 +16,8 @@ public class ComputeBMI  {
     double weightInKilograms = weight * KILOGRAMS_PER_POUND;
     double heightInMeters = height * METERS_PER_INCH;
 
+double IBM = weightInKilograms / Math.pow(heightInMeters,2);
+
+System.out.println ("Your IBM is: "+ IBM);
   }
 }
