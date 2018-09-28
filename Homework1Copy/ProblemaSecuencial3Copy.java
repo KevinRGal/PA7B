@@ -1,26 +1,18 @@
-import java.util.Scanner;
-
-public class ProblemaSecuencial3 {
+import javax.swing.JOptionPane;
+public class ProblemaSecuencial3Copy {
   public static void main(String[] args) {
     //
-    Scanner input = new Scanner(System.in);
-    //
-  System.out.println("Inserte la base del triángulo y del rectángulo: ");
-  double B = input.nextDouble();
-
-  System.out.println("Inserte la altura del triángulo y del rectángulo unidos: ");
-  double A = input.nextDouble();
-
-  System.out.println("Inserte la altura del rectángulo: ");
-  double C = input.nextDouble();
+double B = Double.parseDouble(JOptionPane.showInputDialog(null,"Inserte la base del triangulo y del rectangulo: "));
+double A = Double.parseDouble(JOptionPane.showInputDialog(null,"Inserte la altura del triangulo y del rectangulo unidos: "));
+double C = Double.parseDouble(JOptionPane.showInputDialog(null,"Inserte la altura del rectangulo: "));
 
   double AT = (B * (A-C))/2;
   double AR = B * C;
   double area = AT + AR;
 
-System.out.println("El área del triángulo es: " + AT);
-System.out.println("El área del rectángulo es: " + AR);
-System.out.println("El área del terreno es: " + area);
+JOptionPane.showMessageDialog(null,"El area del triangulo es: " + AT + "\nEl area del rectangulo es: " + AR + "\n El area del terreno es: " + area);
+//JOptionPane.showMessageDialog(null,"El area del rectangulo es: " + AR);
+//JOptionPane.showMessageDialog(null,"El area del terreno es: " + area);
 
   }
 }

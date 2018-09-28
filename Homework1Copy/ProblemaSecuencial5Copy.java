@@ -1,20 +1,13 @@
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
-public class ProblemaSecuencial5 {
+public class ProblemaSecuencial5Copy {
   public static void main(String[] args) {
     //
-    Scanner input = new Scanner(System.in);
-    //
-  System.out.println("Inserte el cantidad de litros producidos: ");
-  int L = input.nextInt();
-
-  System.out.println("Inserte el precio por galón: ");
-  double PG = input.nextDouble();
+int L = Integer.parseInt(JOptionPane.showInputDialog(null, "Inserte la cantidad de litros producidos: "));
+double PG = Double.parseDouble(JOptionPane.showInputDialog(null, "Inserte el precio por galon: "));
   double TG = L*3.785;
   double GA = TG*PG;
-
-  System.out.println("Cantidad de galones producida: " + TG);
-  System.out.println("Ganancia por la entrega de leche: " + GA);
+  JOptionPane.showMessageDialog(null, "Cantidad de galones producida: " + TG + "\nGanancia por la entrega de leche: " + GA);
 
   }
 }

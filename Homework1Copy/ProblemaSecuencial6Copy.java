@@ -1,16 +1,12 @@
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
-public class ProblemaSecuencial6 {
+public class ProblemaSecuencial6Copy {
   public static void main(String[] args) {
     //
-    Scanner input = new Scanner(System.in);
-    //
-  System.out.println("Ingrese las horas trabajadas por semana: ");
-  double HT = input.nextDouble();
+double HT = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese las horas trabajadas por semana: "));
+double PH = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el pago por hora: "));
 
-  System.out.println("Ingrese el pago por hora: ");
-  double PH = input.nextDouble();
   double SS = HT*PH;
-  System.out.println("El sueldo semanal es de: $" + SS);
+  JOptionPane.showMessageDialog(null, "El sueldo semanal es de: $" + SS);
   }
 }

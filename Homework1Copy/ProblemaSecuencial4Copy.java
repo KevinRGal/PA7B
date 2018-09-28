@@ -1,25 +1,16 @@
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
-public class ProblemaSecuencial4 {
+public class ProblemaSecuencial4Copy {
   public static void main(String[] args) {
     //
-    Scanner input = new Scanner(System.in);
-    //
-  System.out.println("Inserte la base del triángulo rectángulo y radio: ");
-  double R = input.nextDouble();
-
-  System.out.println("Inserte la hipotenusa del triángulo rectángulo: ");
-  double H = input.nextDouble();
+double R = Double.parseDouble(JOptionPane.showInputDialog(null,"Inserte la base del triangulo rectangulo y radio: "));
+double H = Double.parseDouble(JOptionPane.showInputDialog(null,"Inserte la hipotenusa del triangulo rectangulo: "));
   double SQRT = (H*H) - (R*R);
   double C = Math.sqrt(SQRT);
   double AT = 2*(R*C/2);
   double PI = 3.1416;
   double AC = (PI * Math.pow(R,2))/2;
   double area = AT + AC;
-
-    System.out.println("El cateto faltante es: " + C);
-    System.out.println("El área triangular es: " + AT);
-    System.out.println("El área circular es: " + AC);
-    System.out.println("El área de la figura es: " + area);
+JOptionPane.showMessageDialog(null,"El cateto faltante es: " + C + "\nEl area triangular es: " + AT + "\nEl area circular es: " + AC + "\nEl area de la figura es: " + area);
   }
 }
